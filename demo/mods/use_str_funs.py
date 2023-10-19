@@ -2,5 +2,7 @@
 import sys
 print(sys.path)
 
-#import str_funs
+sys.path.append(r"d:\classroom\sep25\demo\st")
+
+import str_funs
 
