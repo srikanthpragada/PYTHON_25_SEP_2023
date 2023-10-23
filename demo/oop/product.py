@@ -13,7 +13,10 @@ class Product:
     def getTaxrate():
         return  Product.taxrate
 
+    def __str__(self):
+        return f"{self.name} - {self.price}"
 
 p1 = Product("iPhone 15", 100000)
+print(p1)
 print(p1.getNetPrice())
 print(Product.getTaxrate())

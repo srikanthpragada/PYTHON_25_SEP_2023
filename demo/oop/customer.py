@@ -13,9 +13,7 @@ class Customer:
     def setemail(self, email):
         self.email = email
 
-    # Create an object of Customer
-
-
+# Create an object of Customer
 c1 = Customer("Mr. Bill", "bill@gmail.com")
 # c1.email = "bill@microsoft.com"
 c1.setemail("bill@microsoft.com")
