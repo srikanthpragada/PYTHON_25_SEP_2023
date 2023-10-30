@@ -1,3 +1,12 @@
+class InvalidSalaryError(Exception):
+    def __init__(self, salary):
+        self.salary = salary
+
+    def __str__(self):
+        return f"Invalid Salary : {self.salary}"
+
+
+
 class Employee:
     # static attribute
     HRAPER = 30
@@ -7,6 +16,9 @@ class Employee:
         self.salary = salary
 
     def setSalary(self, salary):
+        if salary < 0:
+            raise InvalidSalaryError(salary)
+
         self.salary = salary
 
     def setDesg(self, desg):
@@ -17,6 +29,7 @@ class Employee:
 
 
 e1 = Employee(name="Mr. Scott", salary=100000)
+e1.setSalary(-10000)
 print(e1.getSalary())
 
 e2 = Employee("Mr. Larry", "CTO")

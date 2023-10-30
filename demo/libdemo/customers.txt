@@ -1,0 +1,6 @@
+Bill,bill@microsoft.com
+Larry,larry@google.com
+Mark,mark@facebook.com
+Ellison,ellison@oracle.com
+Musk,musk@twitter.com
+

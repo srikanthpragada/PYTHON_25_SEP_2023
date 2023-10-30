@@ -1,7 +1,22 @@
+class Stack_Iterator:
+    def __init__(self, data):
+        self.data = data
+        self.pos = len(data) - 1
+
+    def __next__(self):
+        if self.pos >= 0:
+            self.pos -= 1
+            return self.data[self.pos + 1]
+        else:
+            raise StopIteration()
+
 class Stack:
     def __init__(self, limit=0):
         self.data = []
         self.limit = limit
+
+    def __iter__(self):
+        return  Stack_Iterator(self.data)
 
     def push(self, value):
         if self.limit != 0 and self.length == self.limit:
@@ -29,12 +44,15 @@ class Stack:
         return len(self.data)
 
 
-s = Stack(2)
+s = Stack(6)
 #print(s.pop())
 s.push('Python')
 s.push('Java')
 s.push("JS")
 
-print(s.peek())
-print(s.pop())
-print(s.length)
+# print(s.peek())
+# print(s.pop())
+# print(s.length)
+
+for v in s:
+    print(v)
