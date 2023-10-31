@@ -13,7 +13,7 @@ while True:
         continue  # Ignore line as it doesn't required data
 
     name, email = parts
-    if name == searchname:
+    if name.upper() == searchname.upper():
         print(email)
         found = True
         break
