@@ -14,8 +14,10 @@ and they lived at the bottom of a well.</p>
 
 from bs4 import BeautifulSoup
 soup = BeautifulSoup(html_doc, 'html.parser')
-print(soup.title.text)
+tag = soup.title
+print(type(tag))
+
 print(soup.a['href'])
 
 for a in soup.find_all('a'):
-    print(a['class'][0])
+    print(a['href'])
