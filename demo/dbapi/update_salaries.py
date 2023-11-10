@@ -4,6 +4,7 @@ import dbutil
 con = sqlite3.connect(dbutil.DBNAME)
 cur = con.cursor()
 f = open('salaries.txt', 'rt')
+
 updated = notfound = error = 0
 
 for line in f.readlines():
